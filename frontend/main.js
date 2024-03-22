@@ -1,10 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const movieForm = document.getElementById('movieForm');
-    const movieCardSection = document.querySelector('.movie-card');
+    const movieCardSection = document.querySelector('#container-cards');
 
     movieForm.addEventListener('submit', handleFormSubmit);
 
-    function handleFormSubmit(event) {
+    await getAndDisplayMovies();
+
+    async function getAndDisplayMovies() {
+        try {
+            const movies = await getMovies();
+            movies.forEach(displayMovieCard);
+        } catch (error) {
+            console.error('Error al obtener las películas:', error);
+        }
+    }
+
+    async function getMovies() {
+        const response = await fetch('http://localhost:3000/movies');
+        if (!response.ok) {
+            throw new Error('No se pudieron obtener las películas');
+        }
+        return response.json();
+    }
+
+    async function handleFormSubmit(event) {
         event.preventDefault();
         const movieData = getFormData(movieForm);
         sendMovieData(movieData)
@@ -40,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.add('card');
         card.innerHTML = `
             <div class="card-body">
-                <h5 class="card-title">${movie.title}</h5>
+                <h3 class="card-title" id="title-card">${movie.title}</h3>
                 <img src="${movie.imageUrl}" class="card-img-top" alt="${movie.title}">
                 <p class="card-text">Director: ${movie.director}</p>
                 <p class="card-text">Año: ${movie.year}</p>
@@ -55,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayMovieCard(movie) {
         const card = createMovieCard(movie);
         movieCardSection.appendChild(card);
-        movieCardSection.style.display = 'block';
-        card.style.display = 'block';
     }
 });
+
+
 

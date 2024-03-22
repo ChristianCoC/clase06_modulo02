@@ -1,83 +1,38 @@
 [
   {
-    "title": "The Redemption",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-    "director": "Frank Darabont",
-    "year": "1994",
-    "genre": "Drama",
-    "duration": "142",
-    "rate": "9"
-  },
-  {
-    "title": "Cubanito",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-    "director": "Frank Darabont",
-    "year": "2222",
-    "genre": "Accion",
-    "duration": "147",
-    "rate": "4"
-  },
-  {
-    "title": "Crazy",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-    "director": "Frank Darabont",
-    "year": "1980",
-    "genre": "Drama",
-    "duration": "140",
-    "rate": "7"
-  },
-  {
-    "title": "Sarasa",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-    "director": "Frank Darabont",
-    "year": "3456",
-    "genre": "Drama",
-    "duration": "234",
-    "rate": "7"
-  },
-  {
-    "title": "dfer",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-    "director": "Frank Darabont",
-    "year": "3456",
-    "genre": "Drama",
-    "duration": "4543",
+    "title": "Barbie",
+    "imageUrl": "https://i.ebayimg.com/images/g/2vwAAOSwT0RkveXI/s-l1200.webp",
+    "director": "Greta Gerwig",
+    "year": "2023",
+    "genre": "Comedia/Fantasia",
+    "duration": "114",
     "rate": "6"
   },
   {
-    "title": "sadfdsf",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-    "director": "Frank Darabont",
-    "year": "123",
-    "genre": "Drama",
-    "duration": "123",
-    "rate": "3"
+    "title": "Super Mario Bros",
+    "imageUrl": "https://es.web.img3.acsta.net/pictures/23/02/06/17/15/3568166.jpg",
+    "director": " Aaron Horvath, Michael Jelenic",
+    "year": "2023",
+    "genre": "Infantil/Comedia",
+    "duration": "92",
+    "rate": "7"
   },
   {
-    "title": "adsdfasdfs",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-    "director": "Frank Darabont",
-    "year": "1224",
-    "genre": "Accion",
-    "duration": "342",
-    "rate": "3"
+    "title": "Oppenheimer",
+    "imageUrl": "https://www.infobae.com/new-resizer/1ts6qDldBD3hPPHLDxn05ajBqKs=/arc-anglerfish-arc2-prod-infobae/public/VLFHY43STVH3PBSEULWXPRCSIY.jpeg",
+    "director": " Christopher Nolan",
+    "year": "2023",
+    "genre": "Terror",
+    "duration": "180",
+    "rate": "7"
   },
   {
-    "title": "asdfdfs",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-    "director": "Frank Darabont",
-    "year": "1567",
-    "genre": "Drama",
-    "duration": "123",
-    "rate": "6"
-  },
-  {
-    "title": "asdfdsf",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-    "director": "Frank Darabont",
-    "year": "232",
-    "genre": "Drama",
-    "duration": "212",
-    "rate": "3"
+    "title": "Guardianes de la Galaxia 3",
+    "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/lat_2ae5e247.jpeg",
+    "director": "James Gunn",
+    "year": "2023",
+    "genre": "Acción/Aventura",
+    "duration": "149",
+    "rate": "7"
   }
 ]
