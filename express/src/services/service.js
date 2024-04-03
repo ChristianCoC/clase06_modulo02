@@ -1,1 +1,0 @@
-// Funciones para la comunicación con los usuarios.

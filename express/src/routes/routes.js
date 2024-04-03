@@ -2,13 +2,12 @@
 const { Router } = require('express');
 const { testController } = require('../controllers/controller'); // Ruta del controlador
 const userRouter = require('./userRoutes'); // Ruta de los usuarios
-const postRouter = require('./postRoutes'); // Ruta de los posts
+const moviesRouter = require('./moviesRoute'); // Ruta de las películas
 
 const router = Router(); // Instanciamos el enrutador
 
 router.use('/users', userRouter);
-
-router.use('/posts', postRouter);
+router.use('/movies', moviesRouter);
 
 router.get('/', testController);
 
