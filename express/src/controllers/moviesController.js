@@ -17,9 +17,9 @@ module.exports = {
 
     // Crear una película
     createMovie: async (req, res) => {
-        const { title, imageUrl, director, year, genre, duration, rate } = req.body;
+        const { title, poster, director, year, genre, duration, rate } = req.body;
         try {
-            await moviesService.createMovie(title, imageUrl, director, year, genre, duration, rate);
+            await moviesService.createMovie(title, poster, director, year, genre, duration, rate);
             res.status(201).json({
                 message: 'Película creada correctamente'
             });

@@ -1,24 +1,11 @@
-// Importamos la BD temporal de películas. 
-const dataBaseMovies = require('../../../backend/dataBaseMovies');
+// Importamos la BD temporal de películas.
+const Movie = require('../models/Movie'); 
 
-let id = 4;
 
 module.exports = {
-    getAllMovies: () => {
-        return dataBaseMovies;
+    getAllMovies: async () => {
+        const movies = await Movie.find();
+        return movies;
     },
-    createMovie: (title, imageUrl, director, year, genre, duration, rate) => {
-        const newMovie = {
-            id,
-            title,
-            imageUrl,
-            director,
-            year,
-            genre,
-            duration,
-            rate
-        };
-        id++;
-        dataBaseMovies.push(newMovie);
-    }
-}
+    createMovie: async (title, poster, director, year, genre, duration, rate) => {},
+};
