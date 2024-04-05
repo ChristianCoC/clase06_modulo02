@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const dbCon = async () => {
     try {
-        await mongoose.connect("mongodb+srv://christianjaimesm:Jaimillo81@pruebamovies.ptvufaa.mongodb.net/DataBaseMovies");
+        await mongoose.connect("mongodb+srv://christianjaimesm:Jaimillo81@pruebamovies.ptvufaa.mongodb.net/dbmovies");
         console.log('Base de datos conectada');
     } catch (error) {
         console.log(error);
