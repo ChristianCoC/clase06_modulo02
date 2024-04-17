@@ -1,11 +1,16 @@
 // Definimos las rutas para las películas. (Crear un enrutador)
-const { Router } = require('express');
-const movieController = require('../controllers/moviesController'); // Ruta del controlador
-const validateMovies = require('../middlewares/validateMovies'); // Validación de datos
+import { Router } from "express";
+import { authRequired } from "../middlewares/validateToken.js";
+import { getMovies, getMovie, createMovie, updateMovie, deleteMovie } from "../controllers/moviesController.js";
+//const validateMovies = require("../middlewares/validateMovies"); // Validación de datos
+
 
 const movieRouter = Router(); // Instanciamos el enrutador
 
-movieRouter.get('/', movieController.getAllMovies); // Ruta del controlador para obtener todas las películas
-movieRouter.post('/', validateMovies, movieController.createMovie); // Ruta del controlador para crear una película con validación de datos
+movieRouter.get("/movies", authRequired, getMovies); // Ruta del controlador para obtener todas las películas
+movieRouter.get("/movies/:id", authRequired, getMovie); // Ruta del controlador para obtener una película por ID
+movieRouter.post("/movies", authRequired, createMovie); // Ruta del controlador para crear una película con validación de datos
+movieRouter.put("/movies/:id", authRequired, updateMovie); // Ruta del controlador para actualizar una película
+movieRouter.delete("/movies/:id", authRequired, deleteMovie); // Ruta del controlador para eliminar una película
 
-module.exports = movieRouter;
+export default movieRouter;

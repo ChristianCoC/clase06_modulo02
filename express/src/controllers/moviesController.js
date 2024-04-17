@@ -1,32 +1,45 @@
-// Importamos el servicio de películas.
-const moviesService = require('../services/moviesService');
+import Movie from "../models/Movie.js";
 
-module.exports = {
-
-    // Obtener todas las películas
-    getAllMovies: async (req, res) => {
-        try {
-            const movies = await moviesService.getAllMovies();
-            res.status(200).json(movies);
-        } catch (error) {
-            res.status(500).json({
-                error: 'Error al obtener las películas'
-            });
-        }
-    },
-
-    // Crear una película
-    createMovie: async (req, res) => {
-        const { title, poster, director, year, genre, duration, rate } = req.body;
-        try {
-            await moviesService.createMovie(title, poster, director, year, genre, duration, rate);
-            res.status(201).json({
-                message: 'Película creada correctamente'
-            });
-        } catch (error) {
-            res.status(500).json({
-                error: 'Error al crear la película'
-            });
-        }
-    }
+export const getMovies = async (req, res) => {
+  const movies = await Movie.find().populate("user");
+  res.json(movies);
 };
+
+export const getMovie = async (req, res) => {
+  const movie = await Movie.findById(req.params.id);
+  if (!movie) return res.status(404).json({ message: "Movie not found" });
+  res.json(movie);
+};
+
+export const createMovie = async (req, res) => {
+  const { title, poster, director, year, genre, duration, rate } = req.body;
+
+  const newMovie = new Movie({
+    title,
+    poster,
+    director,
+    year,
+    genre,
+    duration,
+    rate,
+    user: req.user.id
+  });
+  
+  const savedMovie = await newMovie.save();
+  res.json(savedMovie);
+};
+
+export const deleteMovie = async (req, res) => {
+  const movie = await Movie.findByIdAndDelete(req.params.id);
+  if (!movie) return res.status(404).json({ message: "Movie not found" });
+  return res.sendStatus(204);
+};
+
+export const updateMovie = async (req, res) => {
+  const movie = await Movie.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  });
+  if (!movie) return res.status(404).json({ message: "Movie not found" });
+  res.json(movie);
+};
+
