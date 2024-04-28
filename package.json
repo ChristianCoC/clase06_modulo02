@@ -5,9 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npm-run-all --parallel start-server start-live-server",
-    "start-server": "nodemon express/index.js",
-    "start-live-server": "live-server"
+    "start": "nodemon express/index.js"
   },
   "keywords": [],
   "author": "",
